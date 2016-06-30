@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Intersection of Two Arrays</title>
+ </head>
+ <body>
+  
+ </body>
+ <script type="text/javascript">
+function choose(num){
+     //num.sort();
+     for(var i=0;i<num.length;i++){
+         for(var j=i+1;j<num.length;j++){
+          if(num[i]==num[j])
+          {num.splice(j,1);
+          j--}
+         }
+     }
+     return num;
+ }
+var intersection = function(nums1, nums2) {
+  choose(nums1);
+ choose(nums2);
+ console.log(nums1);
+ console.log(nums1.length);
+console.log(nums2);
+console.log(nums2.length);
+ var p=[];
+ for(var i=0;i<nums2.length;i++){
+     for(var j=0;j<nums1.length;j++){
+         if(nums2[i]==nums1[j])
+         p.push(nums2[i]);
+     }
+     
+ }
+ return p;
+ 
+};
+
+ </script>
+</html>
